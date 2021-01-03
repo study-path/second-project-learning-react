@@ -1,0 +1,18 @@
+.dialogs{
+  display:flex;
+  /* flex-direction: column; */
+}
+
+.dialogItems{
+  padding:10px;
+}
+
+.dialog .active {
+  color:gold;
+}
+.messages{
+  padding:10px;
+}
+.message{
+
+}

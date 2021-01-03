@@ -1,11 +1,11 @@
 import React from 'react';
 
-
+import MyPosts from './MyPosts/MyPosts';
 
 const MainContent = () => {
   return (
-    <div className="main-content">
-      Content
+    <div >
+      <MyPosts />
     </div>
   )
 }

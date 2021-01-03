@@ -1,27 +1,35 @@
 import './App.css';
-import './App.css';
-import './App.css';
 
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import Footer from './components/Footer';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Navbar from './components/Navbar';
+import Dialogs from './components/Dialogs/Dialogs';
+import Header from './components/Header/Header';
+import MainContent from './components/MainContent/MainContent';
+import Navbar from './components/Navbar/Navbar';
+import News from './components/News/News';
+
+
 
 
 
 function App() {
   return (
-    <div className ="app">
-      <Header /> 
-      <div className="container">
-        <Navbar />
-        <MainContent />    
-      </div>    
-       
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className ="app">
+        <Header />  
+        <div>
+          </div>        
+        <Navbar />  
+        <div className="app-wrapper-content"> 
+          <Route path="/main-content" component={MainContent}/>
+          <Route path="/dialogs" component={Dialogs}/>       
+          <Route path="/news" component={News}   />
+          
+        </div>    
+      </div>
+    </BrowserRouter>
+   
   );
 }
 
