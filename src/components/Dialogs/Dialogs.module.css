@@ -3,7 +3,7 @@
   /* flex-direction: column; */
 }
 
-.dialogItems{
+.dialogsItems{
   padding:10px;
 }
 
@@ -13,6 +13,6 @@
 .messages{
   padding:10px;
 }
-.message{
-
+.messages .message{
+  color:#666;
 }

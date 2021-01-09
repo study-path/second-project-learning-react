@@ -4,5 +4,10 @@
 }
 
 .app-wrapper-content{
-  display: flex;  
+  display: flex;   
+}
+
+.main-content{
+  width: 85%;
+  background-color: yellow;
 }

@@ -12,21 +12,26 @@ import News from './components/News/News';
 
 
 
-
-function App() {
+function App(props) {
+  console.log("gtrfdhytfjhytfjhytyuj " , props);
   return (
     <BrowserRouter>
       <div className ="app">
         <Header />  
-        <div>
-          </div>        
-        <Navbar />  
-        <div className="app-wrapper-content"> 
-          <Route path="/main-content" component={MainContent}/>
-          <Route path="/dialogs" component={Dialogs}/>       
-          <Route path="/news" component={News}   />
-          
-        </div>    
+        <div className="app-wrapper-content">
+          <Navbar />  
+          <div className="main-content"> 
+            <Route path="/main-content" render={() => {
+              return(
+              <MainContent profilePage={props.appState.profilePage} 
+                           addPost={props.addPost}
+                           updateNewPostText = {props.updateNewPostText}
+                           />)}
+            }/>
+            <Route path="/dialogs" render={() => <Dialogs state={props.appState.dialogsPage} />}/>  
+            <Route path="/news" render ={() => <News />}   />
+          </div>  
+        </div>   
       </div>
     </BrowserRouter>
    
