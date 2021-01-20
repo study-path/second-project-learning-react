@@ -3,14 +3,12 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 import Header from './components/Header/Header';
 import MainContent from './components/MainContent/MainContent';
-import Messages from './components/Messages/Messages';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
-
-
+import Settings from './components/Settings/Settings';
 
 
 function App(props) {
@@ -24,18 +22,16 @@ function App(props) {
           <div className="main-content"> 
             <Route path="/main-content" render={() => {
               return(
-                <MainContent profilePage={props.appState.profilePage} 
-                           dispatch={props.dispatch}
-                />)}
+                <MainContent  />
+              )}
             }/>
-            <Route path="/dialogs" render={() => <Dialogs state={props.appState.dialogsPage} />}/>  
+            <Route path="/dialogs" render={() => <DialogsContainer  />}/>  
             <Route path="/news" render ={() => <News />}   />
-            <Route path="/messages" render ={() => <Messages />}   />
+            <Route path="/settings" render ={() => <Settings />}   />
           </div>  
         </div>   
       </div>
-    </BrowserRouter>
-   
+    </BrowserRouter>   
   );
 }
 
