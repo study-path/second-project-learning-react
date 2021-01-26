@@ -9,6 +9,7 @@ import MainContent from './components/MainContent/MainContent';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
+import UsersContainer from './components/Users/UsersContainer';
 
 
 function App(props) {
@@ -28,6 +29,7 @@ function App(props) {
             <Route path="/dialogs" render={() => <DialogsContainer  />}/>  
             <Route path="/news" render ={() => <News />}   />
             <Route path="/settings" render ={() => <Settings />}   />
+            <Route path="/users" render ={() => <UsersContainer />}   />
           </div>  
         </div>   
       </div>
