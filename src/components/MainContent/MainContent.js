@@ -6,10 +6,10 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 const MainContent = (props) => {
-
+  console.log("MainContent props", props);
   return (
     <div >
-      <ProfileInfo />
+      <ProfileInfo  profile={props.profile}/>
       <MyPostsContainer />
     </div>
   )

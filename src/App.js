@@ -4,26 +4,25 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import DialogsContainer from './components/Dialogs/DialogsContainer';
-import Header from './components/Header/Header';
-import MainContent from './components/MainContent/MainContent';
+import HeaderContainer from './components/Header/HeaderContainer';
+import MainContentContainer from './components/MainContent/MainContentContainer';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import UsersContainer from './components/Users/UsersContainer';
 
 
-function App(props) {
-  console.log("APPPPPPPPPPPPPPPPPPPP " , props);
+function App(props) { 
   return (
     <BrowserRouter>
       <div className ="app">
-        <Header />  
+        <HeaderContainer />  
         <div className="app-wrapper-content">
           <Navbar />  
           <div className="main-content"> 
-            <Route path="/main-content" render={() => {
+            <Route path="/profile/:userId?" render={() => {
               return(
-                <MainContent  />
+                <MainContentContainer  />
               )}
             }/>
             <Route path="/dialogs" render={() => <DialogsContainer  />}/>  

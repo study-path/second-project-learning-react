@@ -1,3 +1,4 @@
+import authReducer from './auth-reducer';
 import dialogsReducer from './dialogs-reducer';
 import profileReducer from './profile-reducer';
 import sidebarReduced from './sidebar-reduser';
@@ -11,7 +12,8 @@ let reducers = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogsReducer,
   sidebar: sidebarReduced,
-  usersPage: usersReducer
+  usersPage: usersReducer,
+  auth:authReducer
 });
 
 

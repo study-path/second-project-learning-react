@@ -1,3 +1,11 @@
 .img{
  width:50px;
 }
+.div{
+  background-color: aquamarine;
+}
+.loginBlock{
+  float:right;
+  padding-right: 10px;
+  color:white
+}
