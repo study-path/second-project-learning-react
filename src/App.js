@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
+import Login from './components/Login/Login';
 import MainContentContainer from './components/MainContent/MainContentContainer';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
@@ -29,6 +30,7 @@ function App(props) {
             <Route path="/news" render ={() => <News />}   />
             <Route path="/settings" render ={() => <Settings />}   />
             <Route path="/users" render ={() => <UsersContainer />}   />
+            <Route path="/login" render ={() => <Login />}   />
           </div>  
         </div>   
       </div>
