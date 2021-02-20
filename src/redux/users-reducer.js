@@ -9,8 +9,6 @@ export const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 export const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
 
-
-
 let initialState = {
   users: [],
   pageSize: 25,
@@ -92,6 +90,7 @@ export const setToggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, i
 
 export const toggleIsFollowingProgress = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching}, userId);
 
+
 export const getUsersThunkCreator = (currentPage, pageSize) => {
   return  (dispatch) => {
     dispatch(setToggleIsFetching(true));  
@@ -116,7 +115,6 @@ export const follow = (userId) => {
       });  
   }
 }
-
 
 export const unfollow = (userId) => {
   return  (dispatch) => {

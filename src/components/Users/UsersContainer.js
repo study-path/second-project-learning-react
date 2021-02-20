@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
 
+import { wirthAuthRedirect } from '../../hoc/wirthAuthRedirect';
 import {
   follow,
   getUsersThunkCreator,
@@ -21,8 +23,7 @@ class UsersContainer extends React.Component {
     this.props.getUsers(pageNumber, this.props.pageSize);   
   }
   
-  render(){
-   console.log('PROPS:' , this.props);
+  render(){  
    return <>    
     {this.props.isFetching ? <Preloader /> : null}
     <Users totalUsersCount ={this.props.totalUsersCount}
@@ -49,8 +50,10 @@ let mapStateToProps = (state) => {
   }
 };
 
-export default connect (mapStateToProps,
-               {follow, unfollow,  
-               setCurrentPage,   
-               toggleIsFollowingProgress, getUsers: getUsersThunkCreator})(UsersContainer);
+
+ export default compose (
+  wirthAuthRedirect,
+  connect (mapStateToProps,{follow, unfollow, setCurrentPage, toggleIsFollowingProgress, getUsers:getUsersThunkCreator})
+)(UsersContainer)   
+ 
 
