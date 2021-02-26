@@ -5,8 +5,7 @@ import s from './ProfileInfo.module.css';
 import ProfileStatus from './ProfileStatus';
 
 
-const ProfileInfo = (props) => {
-  console.log('ProfileInfo props:', props)  
+const ProfileInfo = (props) => {  
   if (!props.profile ){
     return <Preloader />
   }
@@ -15,12 +14,12 @@ const ProfileInfo = (props) => {
     <div>   
       <div className={s.descriptionBlock}>
         <img src={props.profile.photos.large}></img>
-        <ProfileStatus  status={"hello my friends"}/>
+        <ProfileStatus  status={props.status} updateStatus={props.updateStatus}/>
       </div>
-      <div>{props.profile.fullName}</div>
+      {/* <div>{props.profile.fullName}</div>
       <div>{props.profile.lookingForAJob}</div>
-      <div>{props.profile.contacts.github}</div>
-      <div>{props.profile.contacts.instagram}</div>
+      <div>{props.profile.contacts.github} </div>
+      <div>{props.profile.contacts.instagram}</div> */}
     </div>
   );
 };

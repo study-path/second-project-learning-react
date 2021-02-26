@@ -26,8 +26,7 @@ let initialState={
         ...state,
        newMessageBody : action.body      
     }
-    case SEND_MESSAGE: {  
-      debugger;    
+    case SEND_MESSAGE: {          
       let body = state.newMessageBody;
      return{
         ...state,
